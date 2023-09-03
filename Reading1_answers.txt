@@ -1,0 +1,7 @@
+1) HTML consists of tags. Tags can contain other tags.
+2) The figure is an html tag h1, with text inside. The text inside, or the content, will be large because it is a heading tag. After the text is the closing tag, signifying the end of the html element.
+3) Yes, you can nest elements
+4) Void elements are self inclosed, and thus cannot contain child elements. They are represented by one tag, like br, link, and meta.
+5) Replaced elements are replaced by objects like GUI elements or images.
+6) You place attributes after the tag's name but before the > that ends the opening tag
+7) In that element, there's the attribute src which specifies the source of the image, alt which specifies the alt text which displays when you hover over the image or when the image is not available, and ismap which means the image is clickable and the clicked coordinates are sent to the server to be processed
