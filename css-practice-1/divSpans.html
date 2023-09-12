@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Divs and Spans</title>
+    <style>
+        @keyframes up-and-down {
+            from    {margin-top: 0px;} 
+            to      {
+                margin-top: 20px;
+                
+            } 
+        }
+
+        p {
+            margin: 0;
+        }
+        .bluebox {
+            color: #ffae00;
+            background-color: blue;
+            height:100px;
+            width:100px;
+            padding: 10px;
+            border: 10px ridge #cd4c32;
+            border-width: 10px;
+            border-color:  black green orange yellow;
+            border-style: ridge;
+            border-radius: 80px;
+        }
+
+        .bluebox > p {
+            margin: 20%;
+        }
+
+        .greenbox {
+            color: #00FF00;
+            /* background: rgba(0, 128, 0, 0.3); */
+            height:100px;
+            width:auto;
+            padding: 40px 70px;
+            background-image: url("https://booru.soy/themes/theme/logo.png?v=2");
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-origin: content-box;
+            outline-style: double; 
+            outline-width: thick;
+            outline-color: red;
+
+        }
+
+        .yellowbox {
+            color: #FF00FF;
+            margin: 10px;
+            background-color: yellow;
+            height:100px;
+            width:auto;
+            padding: 10px 20px 10px 30px;
+            animation-name: up-and-down;
+            animation-duration: 2s;
+            animation-direction: alternate-reverse;
+            animation-iteration-count: infinite;
+        }
+
+        .great {
+            font-size: 300%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="bluebox">
+        <p>Facebook</p>
+    </div>
+    <div class="yellowbox">
+        <p>Apple is <span class="great">great</span></p>
+    </div>
+    <div class="greenbox">
+        <p>Microsoft</p>
+    </div>
+</body>
+</html>
