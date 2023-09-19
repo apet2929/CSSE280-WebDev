@@ -2,14 +2,9 @@ body {
     background: white;
 }
 
-.page-container {
-    margin-top: 75px;
-}
-
 .button-group {
     padding: 5vw;
     text-align: center;
-    border: gray solid 2px;
 }
 
 .button-group > button {
@@ -23,4 +18,12 @@ body {
     font-family: consolas, arial, sans-serif;
     font-size: 4em;
     text-align: center;
+}
+
+nav {
+    background-color: #800000;
+}
+
+body {
+    background-color: rgba(128, 128, 128, 0.461) !important;
 }
