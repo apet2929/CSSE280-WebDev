@@ -10,11 +10,55 @@
     <p id="demo2">This shouldn't show up</p>
     <p id="demo3">Display: Block</p>
     <p id="demo4">Test functions</p>
+    <script>
+        document.getElementById("demo").style.fontSize = "35px"; 
+        document.getElementById("demo2").style.display = "none"; 
+        document.getElementById("demo3").style.display = "block";
+        
+        function myFunction() {
+            document.getElementById("demo4").style.color = "red";
+        }
+
+        myFunction() 
+    </script>
     <button type="button" onclick="document.write(5 + 6)">Try document write</button>
     <button type="button" onclick="alert('HELP!')">Try alert</button>
     <button type="button" onclick="console.log('Test console log')">Try console log</button>
     <button onclick="window.print()">Print this page</button>
-    <script src="index.js"></script>
-    
+
+    <script>        
+        // This is a comment
+        /*
+        this is a 
+        multiline comment
+        */
+
+        let x = 5
+        x += 10
+        console.log(x)
+
+        var z = 503.12 + 3
+        let $a, _b, c = "abc"
+        console.log(c)
+
+        z <<= 2
+        console.log(z)
+
+        let _ = {
+            "[": 0,
+            "a": {
+                "b": [1,2*2,3]
+            }
+        }
+        console.log(_)
+
+        const y = 10
+        try{
+            y = 20
+        } catch {
+            console.error("error: can't assign to const var")
+        }
+
+    </script>
 </body>
 </html>
