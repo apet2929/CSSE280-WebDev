@@ -8,7 +8,12 @@
 <body style="background-color: antiquewhite;">
     <script>
         window.onload = () => {
-            window.location.href = window.location.href.replace("index.html", "public/index.html")
+            console.log(window.location.href);
+            if(window.location.href.indexOf("index.html") != undefined){
+                window.location.href = window.location.href.replace("index.html", "public/index.html");
+                return;
+            }
+            window.location.href = `${window.location.href}public/index.html`;
         }
     </script>
     Hello world!
