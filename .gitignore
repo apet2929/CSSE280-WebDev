@@ -1,2 +1,6 @@
 node_modules
 .firebase
+
+public/final_project/leptos-tutorial/target
+public/final_project/leptos-tutorial/dist
+public/final_project/leptos-tutorial/Cargo.lock
