@@ -1,5 +1,8 @@
+mod app;
+
 use leptos::*;
 use leptos::html::*;
+use leptos_meta::*;
 // use leptos::ev::*;
 
 // Example usage:
@@ -24,7 +27,9 @@ fn ProgressBar(
     }
 }
 
-pub fn app() -> impl IntoView {
+pub fn app(cx: leptos_meta::BodyContext) -> impl IntoView {
+
+    
     let(count, set_count) = create_signal(0);
     div()
         .child(
@@ -39,7 +44,7 @@ pub fn app() -> impl IntoView {
         )
         .child(
             p()
-                .child("Value: ")
+                .child("Yeee: ")
                 .child(move || count.get())
         )
         .dyn_classes(move || vec!["red", "blue", "yellow", "green"])
@@ -49,6 +54,35 @@ pub fn app() -> impl IntoView {
 // It just mounts our component to the <body>
 // Because we defined it as `fn App`, we can now use it in a
 // template as <App/>
-fn main() {
-    leptos::mount_to_body(app)
+
+#[component]
+fn MyApp() -> impl IntoView {
+    provide_meta_context();
+    view! {
+      <main>
+        <Title text="Page 1"/>
+        <Stylesheet href="/style.css"/>
+        <div class="text-centered">
+            "Hello world!"
+        </div>
+      </main>
+    }
+}
+
+// fn main() {
+//     leptos::mount_to_body(MyApp)
+// }
+
+use app::*;
+use leptos::*;
+
+pub fn main() {
+    _ = console_log::init_with_level(log::Level::Debug);
+    console_error_panic_hook::set_once();
+
+    logging::log!("csr mode - mounting to body");
+
+    mount_to_body(|| {
+        view! { <App /> }
+    });
 }
