@@ -7,47 +7,88 @@
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css' integrity='sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==' crossorigin='anonymous'/>
 </head>
 <body>
-    <div class="container-fluid">
-        <nav class="navbar navbar-expand bg-light navbar-light">
-            <div class="container-fluid">
-                <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Disabled</a>
-                </li>
-                </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
             </div>
-        </nav>
-        <div class="row mt-5">
+            <div class="col-sm-6 ml-auto text-align-right">
+                <nav class="navbar navbar-light">
+                    <div class="container">
+                        <div class="row w-100">
+                            <div class="col-sm">
+                                <div class="nav-item">
+                                    <a class="nav-link active" href="#">Home</a>
+                                </div> 
+                        
+                            </div>
+                            <div class="col-sm">
+                                <div class="nav-item">
+                                    <a class="nav-link active" href="#">Portfolio</a>
+                                </div> 
+                        
+                            </div>
+                            <div class="col-sm">
+                                <div class="nav-item">
+                                    <a class="nav-link active" href="#">Contact</a>
+                                </div> 
+                        
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        
+        <div class="row">
             <div class="col-sm-4">
                 <div class="card p-0 align-items-center justify-content-center">
                     <div class="card-header w-100">
-                        <h4 class="card-title text-center">Hedwig</h4>
+                        <h4 id="bird-name" class="card-title text-center">Hedwig</h4>
                     </div>
-                    <img class="card-img w-75"
+                    <img id="bird-img" class="card-img"
                         src="https://images.ctfassets.net/usf1vwtuqyxm/6OqzGUJxO8OekUQokywEwm/ff39e851001eb24607f09d6364743eed/Hedwig_WB_F3_HedwigInTheForest_Still_100615_Port.jpg"
                         alt="Hedwig">
-    
-                    <div class="card-body bg-light w-100">
-                      <p class="d-block text-center">We provide a commercial mail service for Hogwarts.</p>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div class="container h-100">
+                    <div class="row align-items-center h-100">
+                        <div class="col-6 mx-auto text-center" style="font-size: 1.8rem;">
+                            We provide a mail and commercial services for Hogwarts
+                        </div>
+                    </div>
+                    <div class="row align-items-center">
+                        <div class="col-6 mx-auto text-center">
+                            <button class="btn btn-dark" onclick="switchBird()">Select</button>
+                        </div>
                     </div>
                 </div>
             </div>
-           
-            
-            
         </div>
     </div>
+
+    <footer class="text-center">
+        <div class="container p-4">
+            <div id="footer" class="row my-5">
+                <div class="col-sm-4"></div>
+                <a href="#" class="col">
+                    <img src="instagram.png" alt="Instagram" class="w-75 img-thumbnail">
+                </a>
+                <a href="#" class="col">
+                    <img src="twitter.png" alt="Instagram" class="w-75 img-thumbnail">
+                </a>
+                <a href="#" class="col">
+                    <img src="dribbble-logo.png" alt="Instagram" class="w-75 img-thumbnail">
+                </a>
+                <a href="#" class="col">
+                    <img src="behance.png" alt="Instagram" class="w-75 img-thumbnail">
+                </a>
+            </div>
+        </div>
+    </footer>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js' integrity='sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==' crossorigin='anonymous'></script>
     <script src="main.js"></script>
 </body>
