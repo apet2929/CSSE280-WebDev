@@ -47,6 +47,9 @@ pub fn app(cx: leptos_meta::BodyContext) -> impl IntoView {
                 .child("Yeee: ")
                 .child(move || count.get())
         )
+        .child(
+            ProgressBar(ProgressBarProps { max: (50), progress2: (Signal::derive(move || count.get())) })
+        )
         .dyn_classes(move || vec!["red", "blue", "yellow", "green"])
 }
 
