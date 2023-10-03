@@ -1,12 +1,24 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**",
-      "**/final_project/**"
-
-    ]
-  }
+  "hosting": [
+    {
+      "site":   "petersa2-csse280",
+      "public": "public",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "**/final_project/**"
+      ]
+    },
+    {
+      "site":   "petersa2-csse280-tictactoe02",
+      "public": "tictactoe02",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**",
+        "**/final_project/**"
+      ]
+    }
+  ]
 }

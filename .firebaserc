@@ -1,5 +1,18 @@
 {
   "projects": {
     "default": "petersa2-csse280"
-  }
+  },
+  "targets": {
+    "petersa2-csse280": {
+      "hosting": {
+        "english": [
+          "petersa2-csse280"
+        ],
+        "spanish": [
+          "es-petersa2-csse280"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
