@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css' integrity='sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg==' crossorigin='anonymous'/>
+</head>
+<body>
+    <div class="container">
+        <div class="py-5 text-center">
+            <h2 class="display-4">Car Selector</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-4 order-md-1 mb-4">
+                <h4 class="fw-bold">CAR LIST</h4>
+                <ul id="car-list" class="list-group mb-3">
+                    <li>Lol</li>
+                </ul>
+            </div>
+            <div class="col-md-8 order-md-2">
+                <div id="car">
+                    <div class="row">
+                        <div class="col text-center">
+                            <h2 id="car-name" class="display-4 fw-bold">Coupe Maserati</h2>
+                        </div>
+                        <div class="col text-center">
+                            <p class="display-5">
+                                vote count:
+                                <span id="car-count">3</span>
+                            </p>
+                        </div>
+                    </div>
+                    <img src="pic/coupe-maserati.jpg" alt="muscle car" id="car-img" class="w-100 mx-auto d-block">
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
