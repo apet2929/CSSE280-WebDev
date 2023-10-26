@@ -81,3 +81,4 @@ const getTestimonies = () => {
 
 let index = 0;
 document.getElementById("newTestimonyButton").addEventListener('click', (e) => updateClient())
+updateClient()
