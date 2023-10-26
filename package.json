@@ -1,6 +1,9 @@
 {
   "dependencies": {
+    "chalk": "^4.1.2",
     "firebase": "^10.4.0",
-    "firebase-tools": "^12.5.4"
+    "firebase-tools": "^12.5.4",
+    "validator": "^13.11.0",
+    "yargs": "^17.7.2"
   }
 }
