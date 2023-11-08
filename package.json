@@ -10,7 +10,7 @@
     "yargs": "^17.7.2"
   },
   "scripts": {
-    "start": "node ./public/FollowAlongs/follow-along-11/server.js",
-    "dev": "nodemon ./public/FollowAlongs/follow-along-11/server.js"
+    "start": "node ./public/Exams/Exam2/webServer/app.js",
+    "dev": "nodemon ./public/Exams/Exam2/webServer/app.js"
   }
 }

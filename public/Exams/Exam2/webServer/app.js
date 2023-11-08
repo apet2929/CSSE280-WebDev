@@ -4,19 +4,20 @@ var app = express();
 app.use('/', express.static("public"));
 app.use('/api/', express.json());
 
-let data = {};
-
 const fs = require("fs");
-const serverSideStorage = "../data/db.json";
+const serverSideStorage = "./public/Exams/Exam2/data/db.json";
 
-fs.readFile(serverSideStorage, function (err, buf) {
-    if (err) {
-        console.log("error: ", err);
-    } else {
-        data = JSON.parse(buf.toString());
-    }
-    console.log("Data read from file.");
-});
+let readMonths = async () => {
+    fs.readFile(serverSideStorage, function (err, buf) {
+        if (err) {
+            console.log("error: ", err);
+            return []
+        } else {
+            return JSON.parse(buf.toString());
+        }
+    });
+}
+
 
 function saveToServer(data) {
     fs.writeFile(serverSideStorage, JSON.stringify(data), function (err, buf) {
@@ -30,17 +31,27 @@ function saveToServer(data) {
 
 
 // TODO: Create your backend API here:
-app.get("/api/getmonths", (req, res) => res.send(data))
-app.put("/api/move/:fromindex/:toindex", (req, res) => {
-    let from = req.query.fromindex
-    let to = req.query.toindex
-    let temp = data.months[from]
-    data.months[from] = data.months[to]
-    data.months[to] = temp
-    saveToServer(data)
-    console.log(data);
+app.get("/api/getmonths", async (req, res) => {
+    const data = await readMonths()
     res.json(data)
 })
+
+app.put("/api/move/:fromindex/:toindex", async (req, res) => {
+    console.log("Moving");
+    let data = await readMonths()
+    let from = parseInt(req.params.fromindex)
+    let to = parseInt(req.params.toindex)
+
+    let temp = data[from]
+    data[from] = data[to]
+    data[to] = temp
+
+    saveToServer(data)
+
+    console.log(data);
+    res.json({foo: "bar"})
+})
+
 app.post("/api/setmonths", (req, res) => {
     data = req.body
     saveToServer(req.body)
